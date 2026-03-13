@@ -48,6 +48,9 @@ res.json({success: true});
     console.log(err);
     res.json({ success: false });
   }});
+ app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 
 app.listen(port, () => {
   console.log("Server running on", port);
